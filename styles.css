@@ -5,6 +5,7 @@ html{
 }
 body {
 	height: 100%;
+	margin: 0px;
 	font: 16px Sans-Serif;
 	background: #F0EAD6;
 }
@@ -19,10 +20,10 @@ h2 {
 
 .myPic {
 	border-radius: 50%;
-	border:3px solid #F0EAD6;
+	border: 3px solid #F0EAD6;
 	margin-left: 40%;
 }
 
 .heading {
-	margin-left: 30px;
+	padding-left: 20%;
 }
