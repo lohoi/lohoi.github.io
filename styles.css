@@ -1,6 +1,6 @@
 html{
 	height: 100%;
-	margin: 30px;
+	margin: 0px;
 
 }
 body {
@@ -15,11 +15,14 @@ footer{
 
 h2 {
 	text-align: center;
-	text-decoration: underline;
 }
 
 .myPic {
 	border-radius: 50%;
 	border:3px solid #F0EAD6;
+	margin-left: 40%;
+}
 
+.heading {
+	margin-left: 30px;
 }
