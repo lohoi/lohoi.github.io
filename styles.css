@@ -3,6 +3,7 @@ html{
 	margin: 0px;
 
 }
+
 body {
 	height: 100%;
 	margin: 0px;
@@ -17,6 +18,10 @@ footer{
 
 h2 {
 	text-align: center;
+}
+
+.greetings{
+	height: 60%;
 }
 
 .myPic {
