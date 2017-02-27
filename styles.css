@@ -20,6 +20,11 @@ h2 {
 	text-align: center;
 }
 
+a {
+	color: #F0EAD6;
+	font-weight: bold;
+}
+
 .greetings{
 	padding: 30% 15%;
 	display: none;
