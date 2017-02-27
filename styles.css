@@ -1,11 +1,10 @@
 html{
 	height: 100%;
-	margin: 0;
+	margin: 30px;
 
 }
 body {
 	height: 100%;
-	margin: 30px;
 	font: 16px Sans-Serif;
 	background: #F0EAD6;
 }
@@ -14,7 +13,13 @@ footer{
 
 }
 
+h2 {
+	text-align: center;
+	text-decoration: underline;
+}
+
 .myPic {
 	border-radius: 50%;
 	border:3px solid #F0EAD6;
+
 }
