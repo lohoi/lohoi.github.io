@@ -8,7 +8,6 @@ body {
 	margin: 0px;
 	font: 16px Sans-Serif;
 	background: #F0EAD6;
-	color: white;
 }
 
 footer{
@@ -27,8 +26,9 @@ h2 {
 
 .introduction {
 	background: #303030;
+	color: white;
+    padding: 04% 15%;
 }
 
 .heading {
-	padding-left: 20%;
 }
