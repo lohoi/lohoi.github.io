@@ -4,11 +4,15 @@ html{
 
 }
 body {
-  height: 100%;
-  margin: 0;
-  font: 16px Sans-Serif;
+	height: 100%;
+	margin: 0;
+	font: 16px Sans-Serif;
 }
 
 footer{
 
+}
+
+.myPic {
+	border-radius: 50%;
 }
