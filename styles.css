@@ -64,7 +64,7 @@ a {
 .radar-chart.focus .area.focused {
   fill-opacity: 0.9;
 }
-.area.albertSkills, .albertSkills .circle {
+.area.what9000, .what9000 .circle {
   fill: #FFD700;
   stroke: none;
 }
