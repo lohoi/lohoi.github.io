@@ -5,6 +5,8 @@ TODOS:
 * Cool navbar
 * Refine content
 * Cool underline underneath titles
+* Link Resume, LinkedIn, Github acc
+* Change Relevant coursework section to bullets?
 
 
 # d3js skills sections radar graph
