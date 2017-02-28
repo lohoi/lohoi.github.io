@@ -6,3 +6,4 @@ TODOS:
 * Hamburger menu navbar
 * Refine content
 * Cool underline underneath titles
+* Better introduction
