@@ -2,10 +2,12 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-	<script type="text/javascript" src="javascript.js"></script>
 
+	<script type="text/javascript" src="javascript.js"></script>
 	<link rel="stylesheet" type="text/css" href="styles.css">
+
 	<title> Albert Lo </title>
 </head>
 <body>
@@ -40,15 +42,20 @@
 	</div>
 
 	<div class="school">
-		<div class="heading">
-			<h2> Education </h2>
-		</div>
-		<div class="schoolContent">
-			<p> Bachelors of Science in Engineering in Computer Science</p>
-			<p> 
-				Relevant Coursework in Operating Systems (EECS 482), Computer Security (EECS 388), Machine Learning (EECS 445), 
-				Applied Regression (STATS 413), and Probability and Statistics (STATS 425) </p>
-		</div>
+    	<div class="heading">
+    		<h2> Education </h2>
+        	<div class="col-xs-6">
+        		<!-- Left Col-->
+        		<p> Bachelors of Science in Engineering in Computer Science</p>
+        	</div>
+        	<div class="col-xs-6">
+        		<!-- Right Col -->
+        		<p> 
+					Relevant Coursework in Operating Systems (EECS 482), Computer Security (EECS 388), Machine Learning (EECS 445), 
+					Applied Regression (STATS 413), and Probability and Statistics (STATS 425)
+				</p>
+        	</div>
+    	</div>
 	</div>
 
 	<div class="skills">
@@ -56,7 +63,7 @@
 	</div>
 
 	<footer> 
-		Built by Albert Lo </br>
+		&copy; Built by Albert Lo </br>
 		Last Updated on Feb. 2017
 	</footer>
 </body>
