@@ -7,6 +7,7 @@ TODOS:
 * Cool underline underneath titles
 * Link Resume, LinkedIn, Github acc
 * Change Relevant coursework section to bullets?
+* Replace pro pic
 
 
 # d3js skills sections radar graph
