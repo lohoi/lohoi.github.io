@@ -7,7 +7,7 @@ body {
 	height: 100%;
 	margin: 0px;
 	font: 16px Helvetica;
-	background: #F0EAD6;
+	background: #EEE8AA;
     text-align: center;
 }
 
@@ -21,7 +21,7 @@ h2 {
 }
 
 a {
-	color: #F0EAD6;
+	color: #EEE8AA;
 	font-weight: bold;
 }
 
@@ -36,7 +36,7 @@ a {
 
 .myPic {
 	border-radius: 50%;
-	border: 3px solid #F0EAD6;
+	border: 3px solid #EEE8AA;
     display: block;
     margin: 0 auto;
 }
