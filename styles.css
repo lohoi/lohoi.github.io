@@ -45,17 +45,18 @@ a {
 .introduction {
 	background: #303030;
 	color: white;
-    padding: 02% 15%;
+    padding: 2% 15%;
 }
 
 .industry {
-    padding: 02% 15%;
+    padding: 2% 15%;
 }
 
 .school {
-	padding: 02% 15%;
+	padding: 2% 15%;
 }
 
 .footer {
-	padding: 02% 15%;
+	margin-top: 2%;
+	padding: 2% 15%;
 }
