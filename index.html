@@ -11,6 +11,7 @@
 
 	<script type="text/javascript" src="javascript.js"></script>
 	<link rel="stylesheet" type="text/css" href="styles.css">
+	<link rel="stylesheet" type="text/css" href="bower_components/radar-chart-d3/src/radar-chart.css">
 
 	<title> Albert Lo </title>
 </head>
@@ -91,12 +92,12 @@
 	 	{
 		    className: 'albertSkills', // optional, can be used for styling
 		    axes: [
-		      {axis: "AngularJS", value: 6},
+		      {axis: "AngularJS", value: 6, yOffset: 10},
 		      {axis: "CSS", value: 6},
 		      {axis: "C#", value: 6},
 		      {axis: "C++", value: 8},  
 		      {axis: "HTML5", value: 7},  
-		      {axis: "Python", value: 7}
+		      {axis: "Python", value: 7, xOffset: -20}
 			]
 	 	}
 	];
