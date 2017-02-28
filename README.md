@@ -2,6 +2,6 @@
 To view, please visit lohoi.github.io 
 
 TODOS: 
-* Add d3js skills sections graph
+* Add d3js skills sections radar graph
 * Hamburger menu navbar
 * Refine content
