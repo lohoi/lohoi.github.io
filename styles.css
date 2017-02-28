@@ -25,6 +25,10 @@ a {
 	font-weight: bold;
 }
 
+ul li {
+	list-style: none;
+}
+
 .row {
 	padding: 2%;
 }
