@@ -48,10 +48,7 @@ a {
     padding: 2% 15%;
 }
 
-.industry {
-    padding: 2% 15%;
-}
-
-.school {
-	padding: 2% 15%;
+.educationContent {
+	 background: #303030;
+	 color: white;
 }

@@ -5,3 +5,4 @@ TODOS:
 * Add d3js skills sections radar graph
 * Hamburger menu navbar
 * Refine content
+* Cool underline underneath titles
