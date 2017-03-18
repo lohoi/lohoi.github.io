@@ -39,11 +39,12 @@ ul li {
 }
 
 .myPic {
-width: 100%; /*Tells image to fit to width of parent container*/
+	width: 170px;
+	margin: 0 auto;
 }
 
 .container {
-width: 33%; /*Use this to control width of the parent container, hence the image*/
+	width: 33%; /*Use this to control width of the parent container, hence the image*/
 }
 
 .introduction {
