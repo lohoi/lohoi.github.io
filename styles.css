@@ -38,6 +38,12 @@ ul li {
 	display: none;
 }
 
+.dropdown {
+    position: fixed;
+    top: 0px;
+    width: 100%;
+}
+
 .myPic {
 	width: 170px;
 	margin: 0 auto;
