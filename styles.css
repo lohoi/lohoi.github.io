@@ -38,11 +38,12 @@ ul li {
 	display: none;
 }
 
-/*.navbar {
+.navbar {
     position: fixed;
     top: 0px;
     width: 100%;
-}*/
+    z-index: 1000;
+}
 
 .myPic {
 	width: auto;
