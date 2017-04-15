@@ -39,18 +39,25 @@
 	  "projections": [],
 	  "marks": [
 		{
+			"type":"symbol",
   			"from": {
   				"data": "edges"
   			},
   			"properties": {
     			"enter": {
-      				"path": {"field": "layout_path"},
-      				"stroke": {"value": "black"},
-      				"strokeOpacity": {"value": 0.15}
+      				// "path": {
+      				// 	"field": "layout_path"
+      				// 	},
+      				// "stroke": {"value": "black"},
+      				// "strokeOpacity": {"value": 0.15}
+      				"size": {"value": 16},
+      "fill": {"value": "steelblue"},
+      "fillOpacity": {"value": 0.8},
+      "stroke": {"value": "white"},
+      "strokeWidth": {"value": 1.5}
     			}
   			}
 		}
-		
 	  ]
 	}
 	var view = new vega.View(vega.parse(vegaJSONSpec))
