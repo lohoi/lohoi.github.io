@@ -64,19 +64,25 @@
 		// 	} 
 		// }],
 		"projections": [],
-		"marks": [{
-			"type": "rect",
-			"from": {"data": "table"},
-			"encode": {
-			"enter": {
-		    	"size": {"value": 16},
-		    	"fill": {"value": "steelblue"},
-		    	"fillOpacity": {"value": 0.8},
-		    	"stroke": {"value": "white"},
-		    	"strokeWidth": {"value": 1.5}
-		    }
-		  }
-		}]
+		"marks": ["marks": [
+    {
+      "type": "rect",
+      "from": {"data":"table"},
+      "encode": {
+        "enter": {
+          "x": {"scale": "xscale", "field": "category", "offset": 1},
+          "width": {"scale": "xscale", "band": 1, "offset": -1},
+          "y": {"scale": "yscale", "field": "amount"},
+          "y2": {"scale": "yscale", "value": 0}
+        },
+        "update": {
+          "fill": {"value": "steelblue"}
+        },
+        "hover": {
+          "fill": {"value": "red"}
+        }
+      }
+    }]
 	}	// end vegaJSONSpec
 
 	var view = new vega.View(vega.parse(vegaJSONSpec))
