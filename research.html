@@ -20,44 +20,74 @@
 	  "padding": {"top": 0, "left": 0, "right": 0, "bottom": 0},
 	  "signals": [],
 	  "data": [
-	  		{	
-	  			"name" : "edges",
-				"format" : {
-					"type" : "csv",
-					"parse" : "auto"
-				},
-				"url" : "subgraph.csv",
-				"transform" : [
+	  	// Edges
+	  	// 	{	
+	  	// 		"name" : "edges",
+				// "format" : {
+				// 	"type" : "csv",
+				// 	"parse" : "auto"
+				// },
+				// "url" : "subgraph.csv",
+				// "transform" : [
+				// 	{
+				// 		"type" : "linkpath",
+				// 		"shape" : "line" 
+				// 	}
+				// ],
+	  	// 	}
+		  	{
+				"name": "nodes",
+				"url": "subgraph_nodes.csv",
+				"format": {"type": "csv", "parse": "auto"},
+				"transform": [
 					{
-						"type" : "linkpath",
-						"shape" : "line" 
-					}
-				],
-	  		}
+			    		"type": "geopoint",
+			    		"projection": "projection",
+			    		"fields": ["longitude", "latitude"]
+			    	},
+			    	{
+			    		"type": "filter",
+			    		"expr": "datum.x != null && datum.y != null"
+			    	}
+				]
+			}
 	  	],
-	  "scales": [],
-	  "projections": [],
-	  "marks": [
+		"scales": [],
+		"projections": [],
+		"marks": [
 		{
-			"type":"symbol",
-  			"from": {
-  				"data": "edges"
-  			},
-  			"properties": {
-    			"enter": {
-      				// "path": {
-      				// 	"field": "layout_path"
-      				// 	},
-      				// "stroke": {"value": "black"},
-      				// "strokeOpacity": {"value": 0.15}
-      				"size": {"value": 16},
-      "fill": {"value": "steelblue"},
-      "fillOpacity": {"value": 0.8},
-      "stroke": {"value": "white"},
-      "strokeWidth": {"value": 1.5}
-    			}
-  			}
+			"type": "symbol",
+			"from": {"data": "nodes"},
+			"encode": {
+			"enter": {
+		    	"size": {"value": 16},
+		    	"fill": {"value": "steelblue"},
+		    	"fillOpacity": {"value": 0.8},
+		    	"stroke": {"value": "white"},
+		    	"strokeWidth": {"value": 1.5}
+		    }
+		  }
 		}
+		// {
+		// 	"type":"symbol",
+  // 			"from": {
+  // 				"data": "edges"
+  // 			},
+  // 			"properties": {
+  //   			"enter": {
+  //     				// "path": {
+  //     				// 	"field": "layout_path"
+  //     				// 	},
+  //     				// "stroke": {"value": "black"},
+  //     				// "strokeOpacity": {"value": 0.15}
+  //     				"size": {"value": 16},
+  //   	"fill": {"value": "steelblue"},
+  //   	"fillOpacity": {"value": 0.8},
+  //   	"stroke": {"value": "white"},
+  //   	"strokeWidth": {"value": 1.5}
+  //   			}
+  // 			}
+		// }
 	  ]
 	}
 	var view = new vega.View(vega.parse(vegaJSONSpec))
