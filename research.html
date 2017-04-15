@@ -39,17 +39,17 @@
 				"name": "nodes",
 				"url": "subgraph_nodes.csv",
 				"format": {"type": "csv", "parse": "auto"},
-				"transform": [
-					{
-			    		"type": "geopoint",
-			    		"projection": "projection",
-			    		"fields": ["longitude", "latitude"]
-			    	},
-			    	{
-			    		"type": "filter",
-			    		"expr": "datum.x != null && datum.y != null"
-			    	}
-				]
+				// "transform": [
+				// 	{
+			 //    		"type": "geopoint",
+			 //    		"projection": "projection",
+			 //    		"fields": ["longitude", "latitude"]
+			 //    	},
+			 //    	{
+			 //    		"type": "filter",
+			 //    		"expr": "datum.x != null && datum.y != null"
+			 //    	}
+				// ]
 			}
 	  	],
 		"scales": [],
