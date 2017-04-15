@@ -2,6 +2,8 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="subgraph.csv"></script>
 	<script src="https://vega.github.io/vega/vega.min.js"></script>
 	<title>GEMS Lab Research</title>
 </head>
@@ -14,17 +16,15 @@
 
 	<script>
 	var vegaJSONSpec = {
-		"width": 900,
-		"height": 560,
-		"padding": {"top": 0, "left": 0, "right": 0, "bottom": 0},
-		"signals": [],
-		"data": [
-			"name": "states",
-    		"url": "subgraph.csv",
-		],
-		"scales": [],
-		"projections": [],
-		"marks": []
+	  "$schema": "https://vega.github.io/schema/vega/v3.0.json",
+	  "width": 900,
+	  "height": 560,
+	  "padding": {"top": 0, "left": 0, "right": 0, "bottom": 0},
+	  "signals": [],
+	  "data": [],
+	  "scales": [],
+	  "projections": [],
+	  "marks": []
 	}
 	var view = new vega.View(vega.parse(vegaJSONSpec))
   						.renderer('canvas')  // set renderer (canvas or svg)
