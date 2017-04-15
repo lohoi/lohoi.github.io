@@ -19,43 +19,36 @@
 	  "height": 560,
 	  "padding": {"top": 0, "left": 0, "right": 0, "bottom": 0},
 	  "signals": [],
-	  "data": [
-	  	// Edges
-	  	// 	{	
-	  	// 		"name" : "edges",
-				// "format" : {
-				// 	"type" : "csv",
-				// 	"parse" : "auto"
-				// },
-				// "url" : "subgraph.csv",
-				// "transform" : [
-				// 	{
-				// 		"type" : "linkpath",
-				// 		"shape" : "line" 
-				// 	}
-				// ],
-	  	// 	}
-		  	{
+	  "data": [{
 				"name": "nodes",
 				"url": "subgraph_nodes.csv",
-				"format": {"type": "csv", "parse": "auto"},
-				// "transform": [
-				// 	{
-			 //    		"type": "geopoint",
-			 //    		"projection": "projection",
-			 //    		"fields": ["longitude", "latitude"]
-			 //    	},
-			 //    	{
-			 //    		"type": "filter",
-			 //    		"expr": "datum.x != null && datum.y != null"
-			 //    	}
-				// ]
+				"format": {
+					"type" : "csv", 
+					"parse" : {
+						"nodeID" : "number"
+					}
+
+				}
+		}],
+		"scales": [{
+			"name" : "x",
+			"type" : "ordinal",
+			"range" : "width",
+			"domain" : {
+				"data" : "nodes",
+				"field" : "nodeID"
 			}
-	  	],
-		"scales": [],
+		},{
+			"name" : "y",
+			"range" : "height",
+			"nice" : true,
+			"domain" : {
+				"data" : "nodes",
+				"field" : "nodeID"
+			} 
+		}],
 		"projections": [],
-		"marks": [
-		{
+		"marks": [{
 			"type": "symbol",
 			"from": {"data": "nodes"},
 			"encode": {
@@ -67,29 +60,9 @@
 		    	"strokeWidth": {"value": 1.5}
 		    }
 		  }
-		}
-		// {
-		// 	"type":"symbol",
-  // 			"from": {
-  // 				"data": "edges"
-  // 			},
-  // 			"properties": {
-  //   			"enter": {
-  //     				// "path": {
-  //     				// 	"field": "layout_path"
-  //     				// 	},
-  //     				// "stroke": {"value": "black"},
-  //     				// "strokeOpacity": {"value": 0.15}
-  //     				"size": {"value": 16},
-  //   	"fill": {"value": "steelblue"},
-  //   	"fillOpacity": {"value": 0.8},
-  //   	"stroke": {"value": "white"},
-  //   	"strokeWidth": {"value": 1.5}
-  //   			}
-  // 			}
-		// }
-	  ]
-	}
+		}]
+	}	// end vegaJSONSpec
+
 	var view = new vega.View(vega.parse(vegaJSONSpec))
   						.renderer('canvas')  // set renderer (canvas or svg)
   						.initialize('#view') // initialize view within parent DOM container
