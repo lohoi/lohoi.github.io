@@ -21,8 +21,12 @@
 	  "signals": [],
 	  "data": [{	
 	  			"name" : "edges",
-				"type": "csv",
-				"url": "subgraph.csv"
+				"type" : "csv",
+				"url" : "subgraph.csv",
+				"transform" : [
+					"type" : "linkpath",
+					"shape" : "line" 
+				]
 	  		}],
 	  "scales": [],
 	  "projections": [],
