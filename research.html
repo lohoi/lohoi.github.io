@@ -19,18 +19,39 @@
 	  "height": 560,
 	  "padding": {"top": 0, "left": 0, "right": 0, "bottom": 0},
 	  "signals": [],
-	  "data": [{	
+	  "data": [
+	  		{	
 	  			"name" : "edges",
-				"type" : "csv",
+				"format" : {
+					"type" : "csv",
+					"parse" : "auto"
+				},
 				"url" : "subgraph.csv",
-				"transform" : [{
-					"type" : "linkpath",
-					"shape" : "line" 
-				}],
-	  		}],
+				"transform" : [
+					{
+						"type" : "linkpath",
+						"shape" : "line" 
+					}
+				],
+	  		}
+	  	],
 	  "scales": [],
 	  "projections": [],
-	  "marks": []
+	  "marks": [
+		{
+  			"from": {
+  				"data": "edges"
+  			},
+  			"properties": {
+    			"enter": {
+      				"path": {"field": "layout_path"},
+      				"stroke": {"value": "black"},
+      				"strokeOpacity": {"value": 0.15}
+    			}
+  			}
+		}
+		
+	  ]
 	}
 	var view = new vega.View(vega.parse(vegaJSONSpec))
   						.renderer('canvas')  // set renderer (canvas or svg)
