@@ -59,12 +59,12 @@
 		  "name": "xscale",
 		  "type": "band",
 		  "nice" : true,
-		  "domain": {"data": "nodes", "field": "nodeID"},
+		  "domain": {"data": "nodes", "field": "coordinate"},
 		  "range": "width"
 		},
 		{
 		  "name": "yscale",
-		  "domain": {"data": "nodes", "field": "nodeID"},
+		  "domain": {"data": "nodes", "field": "coordinate"},
 		  "nice": true,
 		  "range": "height"
 		}],
@@ -75,12 +75,12 @@
 		"marks": [
 			{
 			  "type": "symbol",
-			  "from": {"data":"nodes"},
+			  "from": {"data":"routes"},
 			  "encode": {
 			    "enter": {
-			      "x": {"scale": "xscale", "field": "coordinate", "offset": 1},
+			      "x": {"scale": "xscale", "field": "source", "offset": 1},
 			      "width": {"scale": "xscale", "band": 1, "offset": -1},
-			      "y": {"scale": "yscale", "field": "coordinate"},
+			      "y": {"scale": "yscale", "field": "target"},
 			      "y2": {"scale": "yscale", "value": 0}
 			    },
 			    "update": {
