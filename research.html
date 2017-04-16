@@ -33,10 +33,7 @@
 			"url": "subgraph.csv",
 			"format": {
 				"type": "csv",
-				"parse": {
-					"FromNodeID": "number",
-					"ToNodeID": "number"
-				}
+				"parse": "auto"
 			},
 			"transform": [{
 				"type": "lookup",
@@ -96,7 +93,18 @@
 			      "fill": {"value": "#333"}
 			    }
 			  }
-			}
+			},{
+				"type": "path",
+				"interactive": false,
+				"from": {"data": "edges"},
+				"properties": {
+					"enter": {
+					  "path": {"field": "layout_path"},
+					  "stroke": {"value": "black"},
+					  "strokeOpacity": {"value": 0.35}
+					}
+				}
+		    }
 		]
 	}	// end vegaJSONSpec
 
