@@ -31,21 +31,22 @@
 		},{
 			"name": "routes",
 			"url": "subgraph.csv",
-			"format": {
-				"type": "csv",
-				"parse": "auto"
-			},
-			"transform": [{
-				"type": "lookup",
-				"from": "nodes", "key": "nodeID",
-				"fields": ["origin", "destination"], "as": ["source", "target"]
-			},{
-				"type": "filter",
-				"expr": "datum.source && datum.target"
-			},{
-				"type": "linkpath",
-				"shape": "line"
-			}]
+			"format": {"type": "csv", "parse": "auto"},
+			"transform": [
+				{
+				  "type": "lookup",
+				  "from": "nodes", "key": "nodeID",
+				  "fields": ["origin", "destination"], "as": ["source", "target"]
+				},
+				{
+				  "type": "filter",
+				  "expr": "datum.source && datum.target"
+				},
+				{
+				  "type": "linkpath",
+				  "shape": "line"
+				}
+			]
 		}],
 		"signals": [],
 		"scales": [
