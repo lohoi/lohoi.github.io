@@ -8,7 +8,7 @@
 </head>
 <body>
 	<h2> Random Subgraph Plots from Blogdata</h2>
-	v14
+	v13
 	<div class="embed">
 		<div id="view"></div>
 	</div>
@@ -45,6 +45,9 @@
 				  "from": "nodes", "key": "nodeID",
 				  "fields": ["origin", "destination"], "as": ["source", "target"]
 				},{
+				  "type": "filter",
+				  "expr": "datum.source && datum.target"
+				},{
 				  "type": "linkpath",
 				  "shape": "line"
 				}
@@ -56,12 +59,12 @@
 		  "name": "xscale",
 		  "type": "band",
 		  "nice" : true,
-		  "domain": {"data": "routes", "field": "coordinate"},
+		  "domain": {"data": "nodes", "field": "coordinate"},
 		  "range": "width"
 		},
 		{
 		  "name": "yscale",
-		  "domain": {"data": "routes", "field": "coordinate"},
+		  "domain": {"data": "nodes", "field": "coordinate"},
 		  "nice": true,
 		  "range": "height"
 		}],
