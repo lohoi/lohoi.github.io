@@ -8,6 +8,7 @@
 </head>
 <body>
 	<h2> Random Subgraph Plots from Blogdata</h2>
+	v1
 	<div class="embed">
 		<div id="view"></div>
 	</div>
@@ -98,14 +99,14 @@
 				"type": "path",
 				"interactive": false,
 				"from": {"data": "routes"},
-				"properties": {
+				"encode": {
 					"enter": {
-					  "path": {"field": "layout_path"},
+					  "path": {"field": "path"},
 					  "stroke": {"value": "black"},
-					  "strokeOpacity": {"value": 0.35}
+					  "strokeOpacity": {"value": 0.15}
 					}
 				}
-		    }
+			}
 		]
 	}	// end vegaJSONSpec
 
