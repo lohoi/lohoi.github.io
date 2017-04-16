@@ -21,17 +21,14 @@
 
 		"data": [{
 		  "name": "nodes",
-		  "values": [
-				{"category":780, "amount":  6144},
-				{"category":877, "amount":  2051},
-				{"category":561, "amount":  6150},
-				{"category":91, "amount":  2058},
-				{"category":809, "amount":  2061},
-				{"category":855, "amount":  4113},
-				{"category":81, "amount":  29},
-				{"category":41, "amount":  6175},
-				{"category":924, "amount":  4128},
-			]
+		  "url": "subgraph_nodes.csv"
+		  "format": {
+		  	"type": "csv"
+		  	"parse": {
+		  		"category": "number",
+		  		"amount": "number"
+		  	}
+		  }
 		}],
 		"signals": [],
 		"scales": [
