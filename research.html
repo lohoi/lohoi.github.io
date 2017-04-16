@@ -379,12 +379,13 @@
 		{
 		  "name": "xscale",
 		  "type": "band",
+		  "nice" : true,
 		  "domain": {"data": "table", "field": "category"},
 		  "range": "width"
 		},
 		{
 		  "name": "yscale",
-		  "domain": {"data": "table", "field": "amount"},
+		  "domain": {"data": "table", "field": "category"},
 		  "nice": true,
 		  "range": "height"
 		}],
@@ -400,7 +401,7 @@
 			    "enter": {
 			      "x": {"scale": "xscale", "field": "category", "offset": 1},
 			      "width": {"scale": "xscale", "band": 1, "offset": -1},
-			      "y": {"scale": "yscale", "field": "amount"},
+			      "y": {"scale": "yscale", "field": "category"},
 			      "y2": {"scale": "yscale", "value": 0}
 			    },
 			    "update": {
