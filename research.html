@@ -43,7 +43,8 @@
 				"from": "nodes", "key": "nodeID",
 			},{
 				"type": "filter",
-				"expr": "datum.FromNodeID && datum.ToNodeID"
+				"fields": ["FromNodeID", "ToNodeID"], "as": ["source", "target"]
+				"expr": "datum.source && datum.target"
 			},{
 				"type": "linkpath",
 				"shape": "line"
