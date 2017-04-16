@@ -29,7 +29,7 @@
 		  	}
 		  }
 		},{
-			"name": "edges",
+			"name": "routes",
 			"url": "subgraph.csv",
 			"format": {
 				"type": "csv",
@@ -38,7 +38,7 @@
 			"transform": [{
 				"type": "lookup",
 				"from": "nodes", "key": "nodeID",
-				"fields": ["FromNodeID", "ToNodeID"], "as": ["source", "target"]
+				"fields": ["origin", "destination"], "as": ["source", "target"]
 			},{
 				"type": "filter",
 				"expr": "datum.source && datum.target"
@@ -96,7 +96,7 @@
 			},{
 				"type": "path",
 				"interactive": false,
-				"from": {"data": "edges"},
+				"from": {"data": "routes"},
 				"properties": {
 					"enter": {
 					  "path": {"field": "layout_path"},
