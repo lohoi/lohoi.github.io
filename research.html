@@ -38,17 +38,15 @@
 				  "type": "lookup",
 				  "from": "nodes", "key": "nodeID",
 				  "fields": ["origin", "destination"], "as": ["source", "target"]
-				},
-				{
+				},{
 				  "type": "filter",
 				  "expr": "datum.source && datum.target"
-				},
-				{
+				},{
 				  "type": "linkpath",
 				  "shape": "line"
 				}
-				]
-			}],
+			]
+		}],
 		"signals": [],
 		"scales": [
 		{
@@ -99,11 +97,11 @@
 				"type": "path",
 				"interactive": false,
 				"from": {"data": "routes"},
-				"encode": {
+				"properties": {
 					"enter": {
 					  "path": {"field": "path"},
 					  "stroke": {"value": "black"},
-					  "strokeOpacity": {"value": 0.15}
+					  "strokeOpacity": {"value": 0.35}
 					}
 				}
 			}
