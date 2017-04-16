@@ -32,7 +32,13 @@
 		},{
 			"name": "routes",
 			"url": "subgraph.csv",
-			"format": {"type": "csv", "parse": "auto"},
+			"format": {
+				"type": "csv",
+				"parse": {
+					"origin": "number",
+					"destination": "number"
+				}
+			},
 			"transform": [
 				{
 				  "type": "lookup",
@@ -53,12 +59,12 @@
 		  "name": "xscale",
 		  "type": "band",
 		  "nice" : true,
-		  "domain": {"data": "nodes", "field": "coordinate"},
+		  "domain": {"data": "nodes", "field": "nodeID"},
 		  "range": "width"
 		},
 		{
 		  "name": "yscale",
-		  "domain": {"data": "nodes", "field": "coordinate"},
+		  "domain": {"data": "nodes", "field": "nodeID"},
 		  "nice": true,
 		  "range": "height"
 		}],
