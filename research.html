@@ -39,19 +39,16 @@
 					"destination": "number"
 				}
 			},
-			// "transform": [
-			// 	{
-			// 	  "type": "lookup",
-			// 	  "from": "nodes", "key": "nodeID",
-			// 	  "fields": ["origin", "destination"], "as": ["source", "target"]
-			// 	},{
-			// 	  "type": "filter",
-			// 	  "expr": "datum.source && datum.target"
-			// 	},{
-			// 	  "type": "linkpath",
-			// 	  "shape": "line"
-			// 	}
-			// ]
+			"transform": [
+				{
+				  "type": "lookup",
+				  "from": "nodes", "key": "nodeID",
+				  "fields": ["origin", "destination"], "as": ["source", "target"]
+				},{
+				  "type": "linkpath",
+				  "shape": "line"
+				}
+			]
 		}],
 		"signals": [],
 		"scales": [
@@ -78,9 +75,9 @@
 			  "from": {"data":"routes"},
 			  "encode": {
 			    "enter": {
-			      "x": {"scale": "xscale", "field": "origin", "offset": 1},
+			      "x": {"scale": "xscale", "field": "source", "offset": 1},
 			      "width": {"scale": "xscale", "band": 1, "offset": -1},
-			      "y": {"scale": "yscale", "field": "destination"},
+			      "y": {"scale": "yscale", "field": "target"},
 			      "y2": {"scale": "yscale", "value": 0}
 			    },
 			    "update": {
