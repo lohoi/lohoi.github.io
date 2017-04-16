@@ -41,10 +41,9 @@
 			"transform": [{
 				"type": "lookup",
 				"from": "nodes", "key": "nodeID",
-				"fields": ["FromNodeID","ToNodeID"], "as": ["source", "target"]
 			},{
 				"type": "filter",
-				"expr": "datum.source && datum.target"
+				"expr": "datum.FromNodeID && datum.ToNodeID"
 			},{
 				"type": "linkpath",
 				"shape": "line"
