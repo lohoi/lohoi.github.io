@@ -375,7 +375,19 @@
 			]
 		}],
 		"signals": [],
-		"scales": [],
+		"scales": [
+		{
+		  "name": "xscale",
+		  "type": "band",
+		  "domain": {"data": "table", "field": "category"},
+		  "range": "width"
+		},
+		{
+		  "name": "yscale",
+		  "domain": {"data": "table", "field": "amount"},
+		  "nice": true,
+		  "range": "height"
+		}],
 		"axes": [
 			{ "orient": "bottom", "scale": "xscale" },
 			{ "orient": "left", "scale": "yscale" }
