@@ -8,7 +8,6 @@
 </head>
 <body>
 	<h2> Random Subgraph Plots from Blogdata</h2>
-	<p>Sample tutorial pulled from Vega github site to check dependencies run. </p>
 	<div class="embed">
 		<div id="view"></div>
 	</div>
@@ -29,6 +28,27 @@
 		  		"nodeID": "number"
 		  	}
 		  }
+		},{
+			"name": "edges",
+			"url": "subgraph.csv",
+			"format": {
+				"type": "csv",
+				"parse": {
+					"FromNodeID": "number",
+					"ToNodeID": "number"
+				}
+			},
+			"transform": [{
+				"type": "lookup",
+				"from": "nodes", "key": "nodeID",
+				"fields": ["FromNodeID","ToNodeID"] "as" ["source", "target"]
+			},{
+				"type": "filter",
+				"expr": "datum.source && datum.target"
+			},{
+				"type": "linkpath",
+				"shape": "line"
+			}]
 		}],
 		"signals": [],
 		"scales": [
@@ -67,8 +87,7 @@
 			      "fill": {"value": "red"}
 			    }
 			  }
-			},
-			{
+			},{
 			  "type": "text",
 			  "encode": {
 			    "enter": {
@@ -77,6 +96,17 @@
 			      "fill": {"value": "#333"}
 			    }
 			  }
+			},{
+				"type": "path",
+				"interactive": false,
+				"from": {"data": "routes"},
+				"properties": {
+					"enter": {
+						"path": {"field": "layout_path"},
+						"stroke": {"value": "black"},
+						"strokeOpacity": {"value": 0.15}
+					}
+				}
 			}
 		]
 	}	// end vegaJSONSpec

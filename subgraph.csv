@@ -1,7 +1,4 @@
-# Directed graph: subgraph.txt 
-# Save as tab-separated list of edges
-# Nodes: 350 Edges: 506
-# FromNodeId,ToNodeId
+FromNodeID,ToNodeID
 8285,9550
 29,2369
 3162,5259
