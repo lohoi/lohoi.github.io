@@ -41,6 +41,7 @@
 			},
 			"transform": [
 				{
+					// TODO: I think this lookup is wrong
 				  "type": "lookup",
 				  "from": "nodes", "key": "nodeID",
 				  "fields": ["origin", "destination"], "as": ["source", "target"]
@@ -75,12 +76,12 @@
 		"marks": [
 			{
 			  "type": "symbol",
-			  "from": {"data":"routes"},
+			  "from": {"data":"nodes"},
 			  "encode": {
 			    "enter": {
-			      "x": {"scale": "xscale", "field": "source", "offset": 1},
+			      "x": {"scale": "xscale", "field": "coordinate", "offset": 1},
 			      "width": {"scale": "xscale", "band": 1, "offset": -1},
-			      "y": {"scale": "yscale", "field": "target"},
+			      "y": {"scale": "yscale", "field": "coordinate"},
 			      "y2": {"scale": "yscale", "value": 0}
 			    },
 			    "update": {
