@@ -5,7 +5,8 @@
   "main": "app.js",
   "dependencies": {
     "angular": "^1.6.5",
-    "angular-ui-router": "^1.0.3"
+    "angular-ui-router": "^1.0.3",
+    "jquery": "^3.2.1"
   },
   "devDependencies": {
     "create-server": "^1.0.1"

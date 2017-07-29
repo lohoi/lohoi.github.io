@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <script type="text/javascript" src="node_modules/jquery/dist/jquery.min.js"></script>
     <script type="text/javascript" src="node_modules/angular/angular.min.js"></script>
-    <!-- <script type="text/javascript" src="node_modules/@ui-router/core/_bundles/ui-router-core.min.js"></script> -->
-    <!-- load angular ui bootstrap...? -->
-    <!-- <script type="text/javascript" src=""></script> -->
+    <script type="text/javascript" src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+    <script type="text/javascript" src="app.js"></script>
     <title> Albert Lo Personal webpage</title>
   </head>
   <body ng-app="webApp">
+    <div ng-controller="mainCtrl">
+      {{ test }}
+    </div>
   </body>
 </html>
