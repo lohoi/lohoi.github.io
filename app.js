@@ -1,4 +1,4 @@
-var app = angular.module("webApp", ['ui.router']);
+var app = angular.module("webApp", ['ui.router', 'ui.bootstrap']);
 
 app.config(function($stateProvider, $urlRouterProvider) {
     $stateProvider
@@ -25,6 +25,7 @@ app.controller('NavCtrl', function($scope, $state) {
     }
     $scope.showLandingPage = true;
 });
+
 $(document).ready(function(){
 	// hide .navbar first
     $(".navbar").hide();

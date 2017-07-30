@@ -5,6 +5,8 @@
     <script type="text/javascript" src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="node_modules/angular/angular.min.js"></script>
     <script type="text/javascript" src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+    <script type="text/javascript" src="node_modules/angular-ui-bootstrap/dist/ui-bootstrap.js"></script>
+    <script type="text/javascript" src="node_modules/angular-ui-bootstrap/dist/ui-bootstrap-tpls.js"></script>
 
     <!-- Controllers -->
     <script type="text/javascript" src="app.js"></script>
@@ -14,13 +16,15 @@
     <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Ubuntu:regular,bold&subset=Latin">
     <link rel="stylesheet" type="text/css" href="bower_components/font-awesome/css/font-awesome.min.css"/>
     <link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" type="text/css" href="node_modules/angular-ui-bootstrap/dist/ui-bootstrap-csp.css"/>
     <link rel="stylesheet" type="text/css" href="application.css"/>
+
 
     <title>ALo</title>
 </head>
 <body ng-app="webApp" ng-controller="NavCtrl" background="img/background.jpg">
     <div class="greetings" align="center" ng-if="showLandingPage">
-        <div>Hi, I'm Albert</div>
+        <div>Welcome</div>
         <button type="submit" class="btn continue" ng-click="continue()"><b>Continue</b> <i class="fa fa-angle-double-right"></i> </button>
     </div>
     <div ng-if="!showLandingPage">
