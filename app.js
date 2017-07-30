@@ -17,3 +17,11 @@ app.config(function($stateProvider, $urlRouterProvider) {
     });
     $urlRouterProvider.otherwise('/home');
 });
+
+app.controller('NavCtrl', function($scope, $state) {
+    $scope.continue = function() {
+        $scope.showLandingPage = false;
+        $state.go('home');
+    }
+    $scope.showLandingPage = true;
+});
