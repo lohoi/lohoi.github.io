@@ -1,19 +1,19 @@
 var app = angular.module("webApp", ['ui.router']);
 
-app.controller('mainCtrl', function($scope) {
-  $scope.test = "hello";
-});
-
-app.config(function($stateProvider, $urlProvider) {
- $stateProvider
-  .state('home', {
-    url: '/home',
-    templateUrl: 'home.html',
-    controller: 'homeCtrl'
-  })
-  .state('about', {
-    url: '/about',
-    templateUrl: 'about.html'
-  });
-  $urlRouterProvider.otherwise('/home');
+app.config(function($stateProvider, $urlRouterProvider) {
+    $stateProvider
+    .state('home', {
+        url: '/home',
+        templateUrl: 'views/home.html',
+        controller: 'HomeCtrl'
+    })
+    .state('about', {
+        url: '/about',
+        templateUrl: 'views/about.html'
+    })
+    .state('contact', {
+        url: '/contact',
+        templateUrl: 'views/contact.html'
+    });
+    $urlRouterProvider.otherwise('/home');
 });

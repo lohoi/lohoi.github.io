@@ -1,30 +1,38 @@
 <!DOCTYPE html>
 <html>
-  <head>
+<head>
     <script type="text/javascript" src="node_modules/jquery/dist/jquery.min.js"></script>
     <script type="text/javascript" src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="node_modules/angular/angular.min.js"></script>
     <script type="text/javascript" src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+
+    <!-- Controllers -->
     <script type="text/javascript" src="app.js"></script>
-  
+    <script type="text/javascript" src="controllers/homeController.js"></script>
+
+
     <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Ubuntu:regular,bold&subset=Latin">
     <link rel="stylesheet" type="text/css" href="bower_components/font-awesome/css/font-awesome.min.css"/>
     <link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.min.css"/>
     <link rel="stylesheet" type="text/css" href="application.css"/>
 
-    <title> Albert Lo Personal webpage</title>
-  </head>
-  <body ng-app="webApp">
-    <div ng-controller="mainCtrl">
-     <nav class="navbar" role="navigation">
-      <div class="navbar-header">
-        <a class="navbar-brand" ui-sref="home"><b>Home</b></a>
-      </div>
-      <ul class="nav navbar-nav">
-        <li><a ui-sref="about">About</a></li>
-      </ul>
+    <title>ALo</title>
+</head>
+<body ng-app="webApp" background="img/background.jpg">
+    <nav class="navbar" role="navigation">
+        <!-- <div class="navbar-header"> -->
+            <!-- <a class="navbar-brand navbar-right" ui-sref="home"><b>Home</b></a> -->
+        <!-- </div> -->
+        <ul class="nav navbar-nav pull-right">
+            <li><a ui-sref="home"><b>Home</b></a></li>
+            <li><a ui-sref="about"><b>About</b></a></li>
+            <li><a ui-sref="contact"><b>Contact</b></a></li>
+        </ul>
     </nav>
-      <ui-view></ui-view>
+    <ui-view></ui-view>
+    <div class="footer navbar-fixed-bottom customFooter" align="center">
+        <div> Handcrafted by Albert Lo </div>
+        <div> All Rights Reserved &copy; 2017</div>
     </div>
-  </body>
+</body>
 </html>
