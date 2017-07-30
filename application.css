@@ -22,6 +22,15 @@ a {
     padding-bottom: 10px;
 }
 
+.landingPage{
+	height: 100%;
+	width:100%;
+}
+
+.greetings {
+    font-size: 88px;
+}
+
 .customFooter {
     margin: 8px;
 }

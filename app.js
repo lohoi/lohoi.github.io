@@ -26,13 +26,12 @@ app.controller('NavCtrl', function($scope, $state) {
     $scope.showLandingPage = true;
 });
 
-
 $(document).ready(function(){
 	// hide .navbar first
     $(".navbar").hide();
 
 
-	$(".landingPage").fadeIn(2000);
+	$(".greetings").fadeIn(2000);
 
     // fade in .navbar
     $(function () {
