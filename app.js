@@ -25,3 +25,25 @@ app.controller('NavCtrl', function($scope, $state) {
     }
     $scope.showLandingPage = true;
 });
+
+
+$(document).ready(function(){
+	// hide .navbar first
+    $(".navbar").hide();
+
+
+	$(".landingPage").fadeIn(2000);
+
+    // fade in .navbar
+    $(function () {
+        $(window).scroll(function () {
+
+                 // set distance user needs to scroll before we start fadeIn
+            if ($(this).scrollTop() > 100) {
+                $('.navbar').fadeIn();
+            } else {
+                $('.navbar').fadeOut();
+            }
+        });
+    });
+});
