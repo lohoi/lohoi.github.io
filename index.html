@@ -28,7 +28,7 @@
         <button type="submit" class="btn continue" ng-click="continue()"><b>Continue</b> <i class="fa fa-angle-double-right"></i> </button>
     </div>
     <div ng-if="!showLandingPage">
-        <nav class="navbar" role="navigation">
+        <nav class="navbar navbar-fixed-top" role="navigation">
             <!-- Regular Flow -->
             <ul class="nav navbar-nav pull-right" ng-if="!showLandingPage">
                 <li><a ui-sref="home"><b>Home</b></a></li>
@@ -38,7 +38,7 @@
         </nav>
         <ui-view></ui-view>
     </div>
-    <div class="footer navbar-fixed-bottom customFooter" align="center">
+    <div class="footer customFooter" align="center">
         <div> Handcrafted by Albert Lo </div>
         <div> All Rights Reserved &copy; 2017</div>
     </div>

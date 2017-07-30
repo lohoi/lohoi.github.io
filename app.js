@@ -34,15 +34,15 @@ $(document).ready(function(){
 	$(".greetings").fadeIn(2000);
 
     // fade in .navbar
-    $(function () {
-        $(window).scroll(function () {
+    // $(function () {
+    //     $( window ).scroll(function() {
+    //         $('.navbar').fadeOut();
+    //         clearTimeout( $.data( this, "scrollCheck" ) );
+    //         $.data( this, "scrollCheck", setTimeout(function() {
+    //             $('.navbar').fadeIn();
+    //         }, 250) );
 
-                 // set distance user needs to scroll before we start fadeIn
-            if ($(this).scrollTop() > 100) {
-                $('.navbar').fadeIn();
-            } else {
-                $('.navbar').fadeOut();
-            }
-        });
-    });
+    //     });
+    // });
+
 });
