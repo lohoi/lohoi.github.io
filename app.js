@@ -34,15 +34,15 @@ $(document).ready(function(){
 	$(".greetings").fadeIn(2000);
 
     // fade in .navbar
-    // $(function () {
-    //     $( window ).scroll(function() {
-    //         $('.navbar').fadeOut();
-    //         clearTimeout( $.data( this, "scrollCheck" ) );
-    //         $.data( this, "scrollCheck", setTimeout(function() {
-    //             $('.navbar').fadeIn();
-    //         }, 250) );
+    $(function () {
+        $( window ).scroll(function() {
+            $('.navbar').fadeOut();
+            clearTimeout( $.data( this, "scrollCheck" ) );
+            $.data( this, "scrollCheck", setTimeout(function() {
+                $('.navbar').fadeIn();
+            }, 250) );
 
-    //     });
-    // });
+        });
+    });
 
 });
