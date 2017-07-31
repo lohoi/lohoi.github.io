@@ -9,7 +9,7 @@ body {
     color: #FFFFFF;
     font-family: Ubuntu, "Arial";
     font-size: 16px;
-    padding: 16px;
+    padding: 4%;
     width: 100%;
     padding: 0%;
 }
@@ -57,18 +57,18 @@ body {
 
 .name {
     font-size: 40px;
-    margin: 8%;
+    margin: 11% 8%;
 }
 
 .intro {
     width: 100%;
-    padding: 4% 8%;
-    background: rgba(210,150,0,0.85);
+    padding: 8% 8%;
+    background: rgba(0,0,0,0.8);
     font-size: 18px;
-    /*border-top: solid 4px #FFFFFF;*/
+    border-top: solid 4px #FFFFFF;
 }
 
-.myCarousel {
+/*.myCarousel {
     height: auto;
     width: 100%;
     overflow: hidden;
@@ -78,6 +78,16 @@ body {
 .myCarousel img {
     position: relative;
     width: 100%;
+}*/
+
+.banner {
+    height:300px;
+    width: 100%;
+    overflow: hidden;
+    background-image: url("img/rickandmorty.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 80%;
 }
 
 .prof_pic_div {
@@ -85,24 +95,42 @@ body {
     height: 160px;
     width: 160px;
     overflow: hidden;
-    display: block;
-    margin: 0 auto;
+    /*margin: 0 auto;*/
     border: #FFFFFF;
     border-style: solid;
     border-width: 4px;
+    display: inline-block;
+    margin: 0 0 0 -33px!important;
+    position: absolute;
+    top: 260px;
+    left: 47.5%;
+    background-image: url("img/prof_pic.jpg");
+    background-position: 50% 80%;
+    background-size:cover;
+/*  
+  display: inline-block;
+    width: 66px;
+    height: 66px;
+    margin: 0 0 0 -33px!important;
+    position: absolute;
+    top: -33px;
+    left: 50%;
+    border: 3px solid #fff;
+*/}
+
 }
 
-.prof_pic_div img {
+/*.prof_pic_div img {
     height: 160px;
     width: 155px;
 }
-
+*/
 .customFooter {
-   /*position: absolute;*/
-/*   right: 0;
-   bottom: 0;
-   left: 0;*/
-   /*text-align: center;*/
-   padding: 3rem;
-    margin: 8px;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 4px;
+    /*margin: 8px;*/
+    /*background: rgba(0,0,0,0.5);; */
 }
