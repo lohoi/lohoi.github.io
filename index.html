@@ -29,18 +29,18 @@
     </div>
     <div ng-if="!showLandingPage">
         <nav class="navbar navbar-fixed-top pull-right" role="navigation">
-            <!-- Regular Flow -->
             <ul class="nav navbar-nav pull-right" ng-if="!showLandingPage">
-              <!-- <li class="pull-right"><a ui-sref="contact"><b>Contact</b></a></li> -->
-              <!-- <li class="pull-right"><a ui-sref="about"><b>About</b></a></li> -->
-              <li class="pull-right"><a ui-sref="home"><b>Home</b></a></li>
+                <!-- <li class="pull-right"><a ui-sref="contact"><b>Contact</b></a></li> -->
+                <li class="pull-right"><a ui-sref="about"><b>About</b></a></li>
+                <li class="pull-right"><a ui-sref="home"><b>Home</b></a></li>
             </ul>
         </nav>
+        <div class="banner"><div class="name"><b>Albert Lo</b></div></div>  
         <ui-view></ui-view>
     </div>
-    <div class="footer customFooter" align="center">
-        <div> Handcrafted by Albert Lo </div>
-        <div> All Rights Reserved &copy; 2017</div>
-    </div>
+    <footer>
+        <div align="center"> Handcrafted by Albert Lo </div>
+        <div align="center"> All Rights Reserved &copy; 2017</div>
+    </footer>
 </body>
 </html>
