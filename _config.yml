@@ -1,8 +1,8 @@
 # Site settings
 title: ALo - Personal Page
 description: A look into the mind of Albert Lo
-# baseurl: "" # the subpath of your site, e.g. /blog
-# url: "lohoi.github.io" # the base hostname & protocol for your site e.g. http://willianjusten.com.br
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "lohoi.github.io" # the base hostname & protocol for your site e.g. http://willianjusten.com.br
 
 # User settings
 username: Albert Lo
